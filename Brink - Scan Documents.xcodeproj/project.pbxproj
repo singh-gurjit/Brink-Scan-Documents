@@ -13,6 +13,8 @@
 		E210127424314BE100EB8197 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E210127224314BE100EB8197 /* Main.storyboard */; };
 		E210127624314BE400EB8197 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E210127524314BE400EB8197 /* Assets.xcassets */; };
 		E210127924314BE400EB8197 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E210127724314BE400EB8197 /* LaunchScreen.storyboard */; };
+		E210128124314DCD00EB8197 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E210128024314DCD00EB8197 /* HomeViewController.swift */; };
+		E210128324314DF800EB8197 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E210128224314DF800EB8197 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		E210127524314BE400EB8197 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E210127824314BE400EB8197 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E210127A24314BE400EB8197 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E210128024314DCD00EB8197 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		E210128224314DF800EB8197 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +63,9 @@
 				E210126C24314BE100EB8197 /* AppDelegate.swift */,
 				E210126E24314BE100EB8197 /* SceneDelegate.swift */,
 				E210127024314BE100EB8197 /* ViewController.swift */,
+				E210128024314DCD00EB8197 /* HomeViewController.swift */,
 				E210127224314BE100EB8197 /* Main.storyboard */,
+				E210128224314DF800EB8197 /* SettingsViewController.swift */,
 				E210127524314BE400EB8197 /* Assets.xcassets */,
 				E210127724314BE400EB8197 /* LaunchScreen.storyboard */,
 				E210127A24314BE400EB8197 /* Info.plist */,
@@ -141,6 +147,8 @@
 				E210127124314BE100EB8197 /* ViewController.swift in Sources */,
 				E210126D24314BE100EB8197 /* AppDelegate.swift in Sources */,
 				E210126F24314BE100EB8197 /* SceneDelegate.swift in Sources */,
+				E210128324314DF800EB8197 /* SettingsViewController.swift in Sources */,
+				E210128124314DCD00EB8197 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
