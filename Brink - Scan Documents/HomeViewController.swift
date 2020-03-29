@@ -8,6 +8,7 @@
 
 import UIKit
 import VisionKit
+import PDFKit
 
 class HomeViewController: UIViewController {
 
@@ -27,9 +28,12 @@ class HomeViewController: UIViewController {
     
     func documentCameraVC(_ controller: VNDocumentCameraViewController, didFinishWith scan: VNDocumentCameraScan) {
         print("Image \(scan.pageCount)")
+        let pdfDocs = PDFDocument()
         for index in 0..<scan.pageCount {
-            let resultImage = scan.imageOfPage(at: index)
-            
+            let image = scan.imageOfPage(at: index)
+            let pdfPage = PDFPage(image: image)
+            pdfDocs.insert(pdfPage!, at: index)
+            resultImage.image = image
         }
     }
     
