@@ -7,24 +7,30 @@
 //
 
 import UIKit
+import VisionKit
 
 class HomeViewController: UIViewController {
 
+    @IBOutlet weak var btnScanDocuments: UIButton!
+    @IBOutlet weak var resultImage: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
 
-        // Do any additional setup after loading the view.
+    //function to scan new document
+    @IBAction func onBtnNewScanClicked(_ sender: UIButton) {
+        let cameraVC = VNDocumentCameraViewController()
+        //cameraVC.delegate = self
+        present(cameraVC, animated: true)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func documentCameraVC(_ controller: VNDocumentCameraViewController, didFinishWith scan: VNDocumentCameraScan) {
+        print("Image \(scan.pageCount)")
+        for index in 0..<scan.pageCount {
+            let resultImage = scan.imageOfPage(at: index)
+            
+        }
     }
-    */
-
+    
 }
