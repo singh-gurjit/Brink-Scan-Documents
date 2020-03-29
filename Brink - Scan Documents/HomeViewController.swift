@@ -10,7 +10,7 @@ import UIKit
 import VisionKit
 import PDFKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, VNDocumentCameraViewControllerDelegate {
 
     @IBOutlet weak var btnScanDocuments: UIButton!
     @IBOutlet weak var resultImage: UIImageView!
@@ -21,11 +21,13 @@ class HomeViewController: UIViewController {
 
     //function to scan new document
     @IBAction func onBtnNewScanClicked(_ sender: UIButton) {
+        //create an instance of VNDocumentCameraViewController
         let cameraVC = VNDocumentCameraViewController()
         //cameraVC.delegate = self
         present(cameraVC, animated: true)
     }
     
+    //call when document scan will be complete
     func documentCameraVC(_ controller: VNDocumentCameraViewController, didFinishWith scan: VNDocumentCameraScan) {
         print("Image \(scan.pageCount)")
         let pdfDocs = PDFDocument()
@@ -33,6 +35,7 @@ class HomeViewController: UIViewController {
             let image = scan.imageOfPage(at: index)
             let pdfPage = PDFPage(image: image)
             pdfDocs.insert(pdfPage!, at: index)
+            //set image to imageview
             resultImage.image = image
         }
     }
